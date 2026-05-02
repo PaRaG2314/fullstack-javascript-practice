@@ -1,0 +1,716 @@
+<!DOCTYPE html> <!-- shift+! -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainbox {
+            background-color: aquamarine;
+            color: red;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 60%;
+            text-align: center;
+        }
+
+        .progress {
+            margin-top: 2%;
+            background-color: lightsteelblue;
+            color: blue;
+            border: 2px dotted black;
+            border-radius: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 40%;
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        .hello {
+            margin-top: 2%;
+            background-color: lightgoldenrodyellow;
+            color: slateblue;
+            border: 5px solid black;
+            border-radius: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 40%;
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        .Newbox {
+            background-color: lightskyblue;
+            height: 500px;
+            width: 500px;
+            padding: 30px;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+        }
+
+        .box1 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(239, 6, 6);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box1:hover {
+            background-color: aquamarine;
+        }
+
+        .box2 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(32, 6, 233);
+            /* float: left; */
+            /* margin-left: 10px; */
+
+        }
+
+        .box3 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(88, 5, 5);
+            /* float: left; */
+            /* margin-left: 10px; */
+
+        }
+
+        .box4 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(3, 246, 88);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box5 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(201, 223, 7);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box6 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(239, 15, 142);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box7 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(99, 58, 204);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box8 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(53, 155, 155);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box9 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(186, 62, 114);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box10 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(6, 119, 239);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box11 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(138, 239, 6);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .box12 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(6, 200, 239);
+            /* float: left; */
+            /* margin-left: 10px; */
+        }
+
+        .custombox {
+            background-color: lightgreen;
+            height: 700px;
+            width: 1400px;
+            padding: 30px;
+            /* display: flex; */
+            gap: 1rem;
+            /* flex-wrap: wrap; */
+        }
+
+        .row1 {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .s1 {
+            height: 200px;
+            width: 250px;
+            background-color: tomato;
+
+        }
+
+        .l1 {
+            height: 200px;
+            width: 600px;
+            background-color: blue;
+        }
+
+        .s2 {
+            height: 200px;
+            width: 250px;
+            background-color: black;
+        }
+
+        .s3 {
+            height: 200px;
+            width: 250px;
+            background-color: purple;
+        }
+
+        .row2 {
+            display: flex;
+            gap: 1rem;
+            margin-top: 20px;
+        }
+
+        .s4 {
+            height: 200px;
+            width: 350px;
+            background-color: purple;
+        }
+
+        .s5 {
+            height: 200px;
+            width: 350px;
+            background-color: salmon;
+        }
+
+        .l2 {
+            height: 200px;
+            width: 670px;
+            background-color: blueviolet;
+        }
+
+        .row3 {
+            display: flex;
+            gap: 1rem;
+            margin-top: 20px;
+        }
+
+        .part1 {
+            height: 280px;
+            width: 450px;
+            background-color: lightseagreen;
+        }
+
+        .l3 {
+            margin: 10px;
+            height: 150px;
+            width: 430px;
+            background-color: greenyellow;
+        }
+
+        .s6 {
+            margin: 10px;
+            height: 100px;
+            width: 430px;
+            background-color: goldenrod;
+        }
+
+        .part2 {
+            height: 280px;
+            width: 450px;
+            background-color: lightsalmon;
+        }
+
+        .l4 {
+            margin: 10px;
+            height: 130px;
+            width: 430px;
+            background-color: pink;
+        }
+
+        .l5 {
+            margin: 10px;
+            height: 120px;
+            width: 430px;
+            background-color: palevioletred;
+        }
+
+        .part3 {
+            height: 280px;
+            width: 450px;
+            background-color: lightcoral;
+        }
+
+        .l6 {
+            margin: 10px;
+            height: 130px;
+            width: 430px;
+            background-color: cornflowerblue;
+        }
+
+        .l7 {
+            margin: 10px;
+            height: 120px;
+            width: 430px;
+            background-color: crimson;
+        }
+
+        .hw1 {
+            background-color: lightpink;
+            height: 750px;
+            width: 1400px;
+            padding: 10px;
+            gap: 1rem;
+        }
+
+        .s7 {
+            margin: 10px;
+            height: 200px;
+            width: 430px;
+            background-color: goldenrod;
+        }
+
+        .s8 {
+            margin: 10px;
+            height: 200px;
+            width: 430px;
+            background-color: orange;
+        }
+
+        .s9 {
+            margin: 10px;
+            height: 200px;
+            width: 430px;
+            background-color: lavender;
+        }
+
+        .hw2 {
+            background-color: lightgray;
+            height: 880px;
+            width: 1400px;
+            padding: 5px;
+            gap: 1rem;
+        }
+
+        .row4 {
+            display: flex;
+        }
+
+        #mybtn {
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        #mybtn:hover {
+            background-color: blue;
+            padding: 20px;
+            border: 2px dotted black;
+        }
+
+        .def {
+            background-image: url("https://luxebook.in/wp-content/uploads/2024/10/1x-1-1024x740.webp");
+            height: 200px;
+            width: 350px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .def:hover {
+            background-image: url("https://hips.hearstapps.com/mtg-prod/6701d85fa0855d0008fea61c/mclaren-w1-3.jpg?w=768&width=768&q=75&format=webp");
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-color: orange; font-style: italic; text-align: center;"><mark>Full Stack</mark></h1>
+    <h2 style="background-color: lightsalmon;font-style: italic; text-align: center;"> Python </h2>
+
+    <hr>
+    <p style="font-size: larger;"><u> 1st class for <mark style="font-style: italic; background-color: lightpink;">Full
+                stack using python </mark> by Naman sir </u></p>
+    <hr>
+    <!-- <u> is used to underline -->
+    <!-- <i> is used for italics font -->
+    <!-- <mark> used to highlight -->
+    <!-- <marquee> used for banner action, also before paragraph tag -->
+    <!-- p*5>lorem20 -->
+    <!-- Multiple paragraphs -->
+    <p><i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam tempora veniam culpa nihil? In dolorem
+            recusandae
+            repellendus, debitis rerum ducimus!</i></p>
+    <p><mark>Nulla saepe vel fugit, doloribus, ipsam adipisci, voluptatum ut laudantium alias neque consequatur dolorem
+            repellat ipsum blanditiis nostrum id. Officiis.</mark></p>
+    <marquee onmouseover="stop()" onmouseout="start()">
+        <p>Veritatis explicabo veniam nostrum voluptas quaerat voluptatem minima odit perspiciatis iste ducimus nemo,
+            enim
+            iure? Numquam id harum aliquid culpa.</p>
+    </marquee>
+    <p style="background-color: aquamarine;">Excepturi ab, vel amet similique obcaecati minima blanditiis debitis natus
+        dolorem explicabo quo labore.
+        Necessitatibus id voluptas aperiam assumenda natus?</p>
+    <p>Neque blanditiis et deserunt enim, accusamus modi, excepturi illo mollitia vel accusantium similique possimus,
+        placeat fugiat dolorum unde sit qui.</p>
+
+    <hr>
+
+    <table border="4" align="center" style="background-color: yellow; width: 40%;">
+        <thead> <!-- tabke heading -->
+            <tr>
+                <th style="background-color: lightgoldenrodyellow;"> Sr no. </th>
+                <th style="background-color: lightgoldenrodyellow;"> Name </th>
+                <th style="background-color: lightgoldenrodyellow;"> Course </th>
+                <th style="background-color: lightgoldenrodyellow;"> Image </th>
+                <th style="background-color: lightgoldenrodyellow;"> Skills </th>
+            </tr>
+        </thead>
+
+        <tbody align="center" style="background-color: lightcoral;">
+            <tr style="background-color: lightsalmon;"> <!-- table row -->
+                <td> 1 </td> <!-- table details -->
+                <td> Naman </td>
+                <td> Python </td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=lhJw4ILajVM"
+                        target="_blank"><img
+                            src="https://static.vecteezy.com/system/resources/previews/035/640/684/non_2x/doodle-human-face-of-man-cute-outline-character-avatar-linear-illustration-vector.jpg"
+                            alt="Sir image" height="50" width="70"></a>
+                </td>
+                <td>
+                    <ol>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr style="background-color: lightskyblue;">
+                <td> 2 </td>
+                <td> Parag </td>
+                <td> PHP </td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=TGZdTeKvRKc"
+                        target="_blank"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTud5OB-RAuEEpCi0f3LPfxXboArHxda_qEyQ&s"
+                            alt="human image" height="50" width="70"></a>
+                </td>
+                <td>
+                    <ol>
+                        <li>Python</li>
+                        <li>CSS</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr style="background-color: lightgreen;">
+                <td> 3 </td>
+                <td> Nidhish </td>
+                <td> Full Stack </td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=Wp6GFju4e5Q"
+                        target="_blank"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8wwEDee0rpYn87cFcbCJflr1lZZ_3VOqvNQ&s"
+                            alt="student" height="50" width="70"></a>
+                </td>
+                <td>
+                    <ol>
+                        <li>Python</li>
+                        <li>HTML</li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br> <!-- br is used to make space between -->
+
+    <img src="https://www.spinny.com/blog/wp-content/uploads/2024/09/videoframe_0.webp" alt="this is a car image"
+        height="300" width="500"> <!-- alt is used for altername name for the images not working -->
+
+    <a href="https://i.pinimg.com/736x/22/78/84/227884e698c894a65c2cc005badf4dce.jpg" target="_blank"><img
+            src="https://i.pinimg.com/736x/22/78/84/227884e698c894a65c2cc005badf4dce.jpg"
+            style="height: 300px; width: 500px;"></a>
+
+
+    <h2>List</h2>
+    <h3>Unordered List</h3>
+
+    <ul type="circle"> <!-- unordered list --> <!-- [type=""] how to store list items -->
+        <li>chair</li> <!--list items -->
+        <li>headphone</li>
+        <li>phone</li>
+    </ul>
+
+    <h3 style="font-style: oblique;">ordered list</h3>
+    <ol type="I"> <!-- ordered list -->
+        <li>pen</li>
+        <li>pencil</li>
+        <li>laptop</li>
+    </ol>
+
+    <h2>Anchor Tag</h2> <!-- website links -->
+    <a href="https://www.amazon.in/" target="_blank">
+        <h3>Amazon Link</h3>
+    </a>
+
+    <p>Lorem ipsum dolor sit amet, <a href="https://www.google.com/" target="_blank"> consectetur elit
+        </a>. Similique
+        nulla optio est quod architecto eius mollitia
+        illo ipsum odio vero inventore nemo beatae, maiores neque. Vel at in quam pariatur?</p>
+    <br>
+    <hr>
+
+    <!-- CSS styling -->
+    <h3 style="background-color: aqua; color: red;">This is a new Heading</h3>
+
+    <!--span is used to style a specific part of a paragraph-->
+    <p style="background-color: blueviolet;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. <span
+            style="background-color: blanchedalmond; color: red;">
+            style="background-color: blanchedalmond; color: red;">Voluptatem, laborum accusantium placeat mollitia
+            beatae
+            cumque ducimus enim soluta possimus, iste, esse repellendus vel.</span> Architecto quo tenetur, nulla ipsa
+        necessitatibus aut.</p>
+
+    <!--Div is a container-->
+    <!--when class is used, all the style css is done in head-->
+    <div class="mainbox">
+        <h3>New Heading</h3>
+        <p>new paragraph</p>
+    </div>
+    <br>
+    <div class="progress">
+        <h3>Day 3</h3>
+        <p>Use of span, Div, class and styling</p>
+    </div>
+    <br>
+    <div class="hello">
+        <h3>Hello</h3>
+        <p>How are you</p>
+    </div>
+    <br>
+    <div class="mclaren">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/McLaren_P1.jpg" height="200px" alt="mclaren">
+        <p>$250,000</p>
+    </div>
+
+    <div class="Newbox">
+        <div class="box1">
+            <h2 style="text-align: center; ">Hey</h2>
+        </div>
+        <div class="box2">
+            <h2 style="text-align: center;">Its</h2>
+        </div>
+        <div class="box3">
+            <h2 style="text-align: center;">Parag</h2>
+        </div>
+        <div class="box4">
+            <h2 style="text-align: center;">Here</h2>
+        </div>
+        <div class="box5">
+            <h2 style="text-align: center;">hello</h2>
+        </div>
+        <div class="box6">
+            <h2 style="text-align: center;">i</h2>
+        </div>
+        <div class="box7">
+            <h2 style="text-align: center;">Am</h2>
+        </div>
+        <div class="box8">
+            <h2 style="text-align: center;">Good</h2>
+        </div>
+        <div class="box9">
+            <h2 style="text-align: center;">Thanks</h2>
+        </div>
+        <div class="box10">
+            <h2 style="text-align: center;">For</h2>
+        </div>
+        <div class="box11">
+            <h2 style="text-align: center;">coming</h2>
+        </div>
+        <div class="box12">
+            <h2 style="text-align: center;">Here</h2>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="custombox">
+        <div class="row1">
+            <div class="s1"><a
+                    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfja1vqUKy9G5f5iDYgerpJIc9XIo5ePfsNA&s"
+                    target="_blank"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfja1vqUKy9G5f5iDYgerpJIc9XIo5ePfsNA&s"
+                        height="150px" width="200px" style="padding: 25px;"></a></div>
+            <div class="l1"><a
+                    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNTMwVLKuXf9ZH1vrWXJ0NUsadbWzxiKr4Q&s"
+                    target="_blank"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNTMwVLKuXf9ZH1vrWXJ0NUsadbWzxiKr4Q&s"
+                        height="150px" width="550px" style="padding: 25px;"></a></div>
+            <div class="s2"><a
+                    href="https://robbreport.com/wp-content/uploads/2024/06/opener-w-Bugatti-3_a9c757.jpg?w=800"
+                    target="_blank"><img
+                        src="https://robbreport.com/wp-content/uploads/2024/06/opener-w-Bugatti-3_a9c757.jpg?w=800"
+                        height="150px" width="200px" style="padding: 25px;"></a>
+            </div>
+            <div class="s3"><a
+                    href="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-73572,resizemode-75,msid-98986433/industry/auto/auto-news/four-new-cars-set-to-launch-next-month-heres-what-you-need-to-know-about-them.jpg"
+                    target="_blank"><img
+                        src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-73572,resizemode-75,msid-98986433/industry/auto/auto-news/four-new-cars-set-to-launch-next-month-heres-what-you-need-to-know-about-them.jpg"
+                        height="150px" width="200px" style="padding: 25px;"></a>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="s4"><a href="https://cdn-s3.autocarindia.com/legacy/cdni/ExtraImages/20230324050608_1.jpg"
+                    target="_blank"><img
+                        src="https://cdn-s3.autocarindia.com/legacy/cdni/ExtraImages/20230324050608_1.jpg"
+                        height="150px" width="300px" style="padding: 25px;"></a></div>
+            <div class="s5"><a
+                    href="https://qz.com/cdn-cgi/image/width=1920,quality=85,format=auto/https://assets.qz.com/media/8829c0e55f0522cea7b589fec420db88.jpg"
+                    target="_blank"><img
+                        src="https://qz.com/cdn-cgi/image/width=1920,quality=85,format=auto/https://assets.qz.com/media/8829c0e55f0522cea7b589fec420db88.jpg"
+                        height="150px" width="300px" style="padding: 25px;"></a></div>
+            <div class="l2"><a
+                    href="https://wizz.volvocars.com/images/2026/256/exterior/studio/standardizedSideView/transparent_exterior-studio-standardizedSideView_4D981BDDBDD6DDEF4B04F8522366191FDE90D044.png?client=pdps&w=3840"
+                    target="_blank"><img
+                        src="https://wizz.volvocars.com/images/2026/256/exterior/studio/standardizedSideView/transparent_exterior-studio-standardizedSideView_4D981BDDBDD6DDEF4B04F8522366191FDE90D044.png?client=pdps&w=3840"
+                        height="150px" width="570px" style="padding: 25px;"></a></div>
+        </div>
+        <div class="row3">
+            <div class="part1">
+                <div class="l3"><a
+                        href="https://media.architecturaldigest.com/photos/66a914f1a958d12e0cc94a8e/16:9/w_2560%2Cc_limit/DSC_5903.jpg"
+                        target="_blank"><img
+                            src="https://media.architecturaldigest.com/photos/66a914f1a958d12e0cc94a8e/16:9/w_2560%2Cc_limit/DSC_5903.jpg"
+                            height="135px" width="415px" style="padding: 8px;"></a></div>
+                <div class="s6"><a
+                        href="https://www.insidehook.com/wp-content/uploads/2024/08/lamborghini-revuelto-insidehook.jpg?fit=1200%2C800"
+                        target="_blank"><img
+                            src="https://www.insidehook.com/wp-content/uploads/2024/08/lamborghini-revuelto-insidehook.jpg?fit=1200%2C800"
+                            height="85px" width="415px" style="padding: 8px;"></a></div>
+            </div>
+            <div class="part2">
+                <div class="l4"><a href="https://spn-sta.spinny.com/blog/20220228143146/559212.jpeg"
+                        target="_blank"><img src="https://spn-sta.spinny.com/blog/20220228143146/559212.jpeg"
+                            height="115px" width="415px" style="padding: 7px;"></a></div>
+                <div class="l5"><a
+                        href="https://cdn-s3.autocarindia.com/Skoda/octavia-rs/124_Skoda_Octavia_RS.jpg?w=640&q=75"><img
+                            src="https://cdn-s3.autocarindia.com/Skoda/octavia-rs/124_Skoda_Octavia_RS.jpg?w=640&q=75"
+                            height="115px" width="415px" style="padding: 7px;"></a></div>
+            </div>
+            <div class="part3">
+                <div class="l6"><a
+                        href="https://images.overdrive.in/wp-content/uploads/2020/07/2020-Audi-RS7-Sportback.jpg"
+                        target="_blank"><img
+                            src="https://images.overdrive.in/wp-content/uploads/2020/07/2020-Audi-RS7-Sportback.jpg"
+                            height="115px" width="415px" style="padding: 6px;"></a>
+                </div>
+                <div class="l7"><a
+                        href="https://static0.carbuzzimages.com/wordpress/wp-content/uploads/2024/03/1093572-12.jpg?q=49&fit=crop&w=360&h=240&dpr=2"
+                        target="_blank"><img
+                            src="https://static0.carbuzzimages.com/wordpress/wp-content/uploads/2024/03/1093572-12.jpg?q=49&fit=crop&w=360&h=240&dpr=2"
+                            height="115px" width="415px" style="padding: 6px;"></a></div>
+            </div>
+        </div>
+
+    </div>
+    <br><br><br>
+    <div class="hw1">
+        <div class="l3" style="margin: auto; height: 200px;"></div>
+        <div class="row2">
+            <div class="s7"></div>
+            <div class="s8"></div>
+            <div class="s9"></div>
+        </div>
+        <div class="row3">
+            <div class="part1">
+                <div class="l3"></div>
+                <div class="s6"></div>
+            </div>
+            <div class="part2">
+                <div class="l4"></div>
+                <div class="l5"></div>
+            </div>
+            <div class="part3">
+                <div class="l6">
+                </div>
+                <div class="l7"></div>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="hw2">
+            <div class="row2" style="margin-top: 0%;">
+                <div class="l2" style="height: 250px; width: 770px; display: flex;">
+                    <div class="s1" style="margin: 10px; height: 230px; width: 380px;"></div>
+                    <div class="s1" style="margin: 10px; height: 230px; width: 380px;"></div>
+                </div>
+                <div class="l2" style="height: 250px; width: 615px; display: flex; background-color: blue;"></div>
+            </div>
+            <div class="row3" style="margin-top: 7px;">
+                <div class="l1" style="background-color: aqua; margin-left: 120px;"></div>
+                <div class="l1" style="background-color: bisque; margin-right: 130px;"></div>
+            </div>
+            <div class="row4" style="margin: 5px;">
+                <div class="l1"></div>
+                <div class="s1"></div>
+                <div class="s1" style="background-color: darkred; margin-left: 1px;"></div>
+                <div class="l1" style="background-color: darkblue;"></div>
+            </div>
+            <div class="row3" style="margin-top: 7px;">
+                <div class="l1" style="background-color: darkorchid; margin-left: 120px;"></div>
+                <div class="l1" style="background-color: darkolivegreen; margin-right: 130px;"></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="def"></div>
+        <br><br>
+
+        <button>Submit</button>
+        <button id="mybtn">Styled Button</button> <!--id is unique unlike class-->
+        <br><br>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.421892558186!2d76.74494417557827!3d30.678403674610433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec0fc0000001%3A0x2fe21eed866f0d52!2sThinkNEXT%20Technologies%20-%20digital%20marketing%20industrial%20training%20internship%20chandigarh%20mohali!5e0!3m2!1sen!2sin!4v1775456253857!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fvcXOrt8hdA?si=tus3DsiWh6xmzWt0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+
+</html>

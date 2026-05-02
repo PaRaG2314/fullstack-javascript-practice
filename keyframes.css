@@ -1,0 +1,85 @@
+h1 {
+    background-color: aquamarine;
+}
+
+.box {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.fade-in {
+    animation: fadeIn 3s infinite;
+}
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.fade-out{
+    animation: fadeOut 3s infinite;
+}
+@keyframes fadeOut{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+.zoom-in{
+    animation: zoomIn 3s infinite;
+}
+@keyframes zoomIn{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+.zoom-out{
+    animation: zoomOut 3s infinite;
+}
+@keyframes zoomOut{
+    from{transform: scale(1);}
+    to{transform: scale(0);}
+}
+
+.rotate{
+    animation: rotate 3s  linear infinite; 
+}
+@keyframes rotate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+.pulse{
+    animation: pulse 2s infinite;
+}
+@keyframes pulse{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
+.slide-left{
+    animation: slideLeft 2s infinite;
+}
+@keyframes slideLeft{
+    from{transform: translateX(-100px);}
+    to{transform: translateX(0px);}
+
+}
+
+.bounce{
+    animation: bounce 2s infinite;
+}
+@keyframes bounce{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-30px);}
+    100%{transform: translateY(0);}
+}
+
+.flip{
+    animation: flip 3s infinite;
+}
+@keyframes flip{
+    from{transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
+}

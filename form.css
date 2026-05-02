@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(240, 222, 118);
+}
+
+.form1 {
+    background-color: lightgoldenrodyellow;
+    border: 2px solid black;
+    width: 35%;
+    padding: 30px;
+}
+
+.newform {
+    justify-items: center;
+    align-content: center;
+}
+
+label{
+    color: red;
+}
+input{
+    background-color: rgb(245, 245, 236);
+}

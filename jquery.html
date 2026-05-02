@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .p1 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p class="p1">this is a paragraph</p>
+    <p>this will disappear</p>
+    <p>when click on it</p>
+    <p class="p1">this is a paragraph</p>
+    <p>this will disappear</p>
+    <p>when click on it</p>
+    <p class="p1">this is a paragraph</p>
+    <p>this will disappear</p>
+    <p>when click on it</p>
+
+    <button id="hide">HIDE</button>
+    <button id="show">SHOW</button>
+    <button id="toggle">HIDE and SHOW</button> -->
+
+    <div class="box1" style="background-color: red; height: 100px; width: 100px; display: none;"></div>
+    <div class="box2" style="background-color: green; height: 100px; width: 100px; display: none;"></div>
+    <div class="box3" style="background-color: yellow; height: 100px; width: 100px; display: none;"></div>
+    
+    <button id="fadein">FADE-IN</button>
+    <script>
+        // $(document).ready(function () {    //$ is the jquery syntax
+        //     $("p").click(function () {
+        //         $(this).hide();          // display: none; is applies which hides the element from the webpage
+        //     })
+        // })
+        // $(document).ready(function () {
+        //     $("#hide").click(function () {
+        //         $(".p1").hide();
+        //     });
+
+        //     $("#show").click(function () {
+        //         $(".p1").show();
+        //     });
+        // });
+        // $(document).ready(function () {
+        //     $("#toggle").click(function () {
+        //         $(".p1").toggle();
+        //     });
+        // });
+        $(document).ready(function(){
+            $("#fadein").click(function(){
+                $(".box1").fadeIn(1000)
+                $(".box2").fadeIn(2500)
+                $(".box3").fadeIn(4000)
+            })
+        })
+    </script>
+</body>
+
+</html>

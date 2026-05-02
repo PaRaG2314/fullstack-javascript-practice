@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Journey</title>
+
+    <style>
+        .box {
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 15px;
+            margin: 10px;
+            width: 50%;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: red;
+        }
+
+        .layout-box {
+            background-color: lightgreen;
+            height: 100px;
+            width: 100px;
+            float: left;
+            margin: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            background-color: lightcyan;
+            padding: 20px;
+            width: 80%;
+        }
+
+        .flex-item {
+            height: 100px;
+            width: 150px;
+            background-color: coral;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .small {
+            height: 100px;
+            width: 150px;
+            background-color: teal;
+        }
+
+        .large {
+            height: 100px;
+            width: 300px;
+            background-color: purple;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="background-color: black; color: white; text-align: center;">
+        🚀 My Developer Journey
+    </h1>
+
+    <h2 style="text-align: center; color: gray;">
+        Learning Full Stack with Python
+    </h2>
+
+    <hr>
+
+    <h2>👨‍💻 About Me</h2>
+
+    <p>
+        <u>Hello! I started learning <mark>Full Stack Development</mark>.</u>
+        I am building my skills step by step every day.
+    </p>
+
+    <p><i>
+        My goal is to become a professional developer and build real-world projects.
+    </i></p>
+
+    <hr>
+
+    <h2>📊 My Learning Progress</h2>
+
+    <table border="2" align="center" style="width: 50%; text-align: center;">
+
+        <thead style="background-color: lightgray;">
+            <tr>
+                <th>Day</th>
+                <th>Topic</th>
+                <th>Status</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr style="background-color: lightgreen;">
+                <td>1</td>
+                <td>HTML Basics</td> 
+                <td>Completed ✅</td>
+                <td>
+                    <ul>
+                        <li>Headings</li>
+                        <li>Paragraphs</li>
+                        <li>Images</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr style="background-color: lightskyblue;">
+                <td>2</td>
+                <td>Lists & Links</td>
+                <td>Completed ✅</td>
+                <td>
+                    <ul>
+                        <li>Anchor Tag</li>
+                        <li>Ordered List</li>
+                        <li>Unordered List</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr style="background-color: lightyellow;">
+                <td>3</td>
+                <td>Div, Span, CSS</td>
+                <td>Completed ✅</td>
+                <td>
+                    <ul>
+                        <li>Div</li>
+                        <li>Span</li>
+                        <li>Internal CSS</li>
+                        <li>Layout (float)</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr style="background-color: lightpink;">
+                <td>4</td>
+                <td>Flexbox & Layout</td>
+                <td>Completed ✅</td>
+                <td>
+                    <ul>
+                        <li>Flexbox</li>
+                        <li>Rows</li>
+                        <li>Layout Design</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr style="background-color: lightcoral;">
+                <td>7</td>
+                <td>HTML Commands & Tables</td>
+                <td>Completed ✅</td>
+                <td>
+                    <ul>
+                        <li>All HTML Tags</li>
+                        <li>Table Structuring</li>
+                        <li>Spacing & Padding</li>
+                    </ul>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br><br>
+
+    <hr>
+    <h2>📘 Today's Learning</h2>
+
+    <h3>📅 Day 1 - HTML Basics</h3>
+    <h4>This is H4 Heading</h4>
+    <p><i>Italic</i></p>
+    <p><u>Underline</u></p>
+    <p><mark>Highlight</mark></p>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
+         height="80" width="80">
+
+    <hr>
+
+    <h3>📅 Day 2 - Lists & Links</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+
+    <ol>
+        <li>Learn</li>
+        <li>Practice</li>
+    </ol>
+
+    <a href="https://www.google.com/" target="_blank">Visit Google</a>
+
+    <hr>
+
+    <h3>📅 Day 3 - Div, Span & CSS</h3>
+
+    <div class="box">
+        <h3>This is inside a Div</h3>
+        <p>Div helps structure content</p>
+    </div>
+
+    <p>
+        This is normal text and 
+        <span class="highlight">this is styled using span</span>
+    </p>
+
+    <div class="layout-box"></div>
+    <div class="layout-box"></div>
+    <div class="layout-box"></div>
+
+    <div style="clear: both;"></div>
+
+    <hr>
+
+    <h3>📅 Day 4 - Flexbox & Layout</h3>
+
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+    </div>
+
+    <div class="row">
+        <div class="small"></div>
+        <div class="large"></div>
+        <div class="small"></div>
+    </div>
+
+    <div class="row">
+        <div class="large"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+    </div>
+
+    <hr>
+
+    <h3>📅 Day 7 - HTML Commands Table</h3>
+
+    <table border="4" align="center" 
+    style="background-color: #20bcbc; width: 70%; border-collapse: collapse; margin-top: 20px;">
+
+        <thead>
+            <tr>
+                <th style="background-color: lightcyan; padding: 15px;"> Sr no. </th>
+                <th style="background-color: lightcyan; padding: 15px;"> Commands </th>
+                <th style="background-color: lightcyan; padding: 15px;"> Syntax </th>
+                <th style="background-color: lightcyan; padding: 15px;"> Use </th>
+            </tr>
+        </thead>
+
+        <tbody align="center" style="background-color: lightseagreen;">
+            <tr><td style="padding:15px;">1</td><td>html</td><td>&lt;html&gt;</td><td>Root</td></tr>
+            <tr><td style="padding:15px;">2</td><td>head</td><td>&lt;head&gt;</td><td>Metadata</td></tr>
+            <tr><td style="padding:15px;">3</td><td>body</td><td>&lt;body&gt;</td><td>Content</td></tr>
+            <tr><td style="padding:15px;">4</td><td>title</td><td>&lt;title&gt;</td><td>Tab</td></tr>
+            <tr><td style="padding:15px;">5</td><td>h1-h3</td><td>&lt;h1&gt;</td><td>Headings</td></tr>
+            <tr><td style="padding:15px;">6</td><td>p</td><td>&lt;p&gt;</td><td>Text</td></tr>
+            <tr><td style="padding:15px;">7</td><td>div</td><td>&lt;div&gt;</td><td>Container</td></tr>
+            <tr><td style="padding:15px;">8</td><td>span</td><td>&lt;span&gt;</td><td>Inline</td></tr>
+            <tr><td style="padding:15px;">9</td><td>a</td><td>&lt;a&gt;</td><td>Link</td></tr>
+            <tr><td style="padding:15px;">10</td><td>img</td><td>&lt;img&gt;</td><td>Image</td></tr>
+            <tr><td style="padding:15px;">11</td><td>button</td><td>&lt;button&gt;</td><td>Clickable</td></tr>
+            <tr><td style="padding:15px;">12</td><td>iframe</td><td>&lt;iframe&gt;</td><td>Embed</td></tr>
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <h3>📅 Day 7 - Button & Iframe</h3>
+
+    <button>Simple Button</button>
+
+    <button style="background-color: aqua; padding: 10px; border-radius: 10px;">
+        Styled Button
+    </button>
+
+    <br><br>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.421892558186!2d76.74494417557827!3d30.678403674610433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec0fc0000001%3A0x2fe21eed866f0d52!2sThinkNEXT%20Technologies%20-%20digital%20marketing%20industrial%20training%20internship%20chandigarh%20mohali!5e0!3m2!1sen!2sin!4v1775456253857!5m2!1sen!2sin"
+        width="400" height="250" style="border:0;" allowfullscreen="">
+    </iframe>
+
+    <br><br>
+
+    <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/fvcXOrt8hdA"
+        frameborder="0" allowfullscreen>
+    </iframe>
+
+    <hr>
+
+    <h2>🛠️ My Current Skills</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>Basic CSS</li>
+        <li>Understanding of Web Structure</li>
+        <li>Flexbox Layout</li>
+    </ul>
+
+    <hr>
+
+</body>
+</html>

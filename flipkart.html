@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - India's Fashion, Electronics, Mobiles & More</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f1f3f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background-color: #2874f0;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: 120px;
+        }
+
+        .search-box {
+            width: 500px;
+            border-radius: 3px;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            background-color: #2874f0;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 0 3px 3px 0;
+            font-size: 16px;
+        }
+
+        .search-btn:hover {
+            background-color: #1a5dc8;
+        }
+
+        a.nav-link {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        a.nav-link:hover {
+            color: #ffe500;
+        }
+
+        .cart-icon {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .cart-icon:hover {
+            color: #ffe500;
+        }
+
+        /* ===== CATEGORY BAR ===== */
+        .category-bar {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .category-item {
+            text-align: center;
+            text-decoration: none;
+            color: #212121;
+            font-size: 13px;
+            font-weight: 500;
+            min-width: 70px;
+        }
+
+        .category-item img {
+            height: 64px;
+            width: 64px;
+            border-radius: 15%;
+            border: 1px solid #e0e0e0;
+        }
+
+        .category-item p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .category-item:hover p {
+            color: #2874f0;
+        }
+
+        /* ===== CAROUSEL ===== */
+        .carousel-img {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== SECTION HEADINGS ===== */
+        .section-heading {
+            background-color: white;
+            padding: 15px 20px 0 20px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #212121;
+            margin: 0;
+        }
+
+        .view-all-btn {
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 3px;
+            font-size: 13px;
+            float: right;
+            margin-top: -40px;
+            margin-right: 20px;
+        }
+
+        .view-all-btn:hover {
+            background-color: #1a5dc8;
+        }
+
+        /* ===== PRODUCT CARDS ===== */
+        .products-row {
+            background-color: white;
+            display: flex;
+            gap: 0px;
+            padding: 10px 10px 20px 10px;
+            overflow-x: auto;
+        }
+
+        .product-card {
+            min-width: 200px;
+            max-width: 200px;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #212121;
+            border-right: 1px solid #f0f0f0;
+        }
+
+        .product-card:hover {
+            background-color: #f5f5f5;
+            color: #2874f0;
+        }
+
+        .product-card img {
+            height: 150px;
+            width: 150px;
+            object-fit: contain;
+        }
+
+        .product-card .product-name {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 8px;
+            margin-bottom: 3px;
+        }
+
+        .product-card .product-price {
+            font-size: 14px;
+            font-weight: 700;
+            color: #212121;
+        }
+
+        .product-card .product-discount {
+            color: #388e3c;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .product-card .product-old-price {
+            color: #999;
+            font-size: 12px;
+            text-decoration: line-through;
+        }
+
+        /* ===== BANNER ROW ===== */
+        .banner-row {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background-color: #f1f3f6;
+        }
+
+        .banner-row img {
+            width: 50%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* ===== DEAL CARDS - like your custombox layout ===== */
+        .deals-section {
+            background-color: white;
+            padding: 15px 20px 20px 20px;
+            margin-bottom: 10px;
+        }
+
+        .deals-section h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #212121;
+            margin-bottom: 3px;
+        }
+
+        .deals-section p {
+            color: #878787;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .deals-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .deal-card {
+            width: 180px;
+            text-align: center;
+            text-decoration: none;
+            color: #212121;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 15px 10px;
+        }
+
+        .deal-card:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            color: #2874f0;
+        }
+
+        .deal-card img {
+            height: 130px;
+            width: 130px;
+            object-fit: contain;
+        }
+
+        .deal-card .deal-name {
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .deal-card .deal-discount {
+            background-color: #ff6161;
+            color: white;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* ===== CATEGORY SHOP SECTION ===== */
+        .shop-section {
+            background-color: white;
+            padding: 15px 20px 20px 20px;
+            margin-bottom: 10px;
+        }
+
+        .shop-section h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #212121;
+            margin-bottom: 15px;
+        }
+
+        .shop-grid {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .shop-card {
+            width: 160px;
+            text-align: center;
+            text-decoration: none;
+            color: #212121;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .shop-card img {
+            height: 120px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .shop-card p {
+            font-size: 13px;
+            font-weight: 500;
+            padding: 8px 5px;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .shop-card:hover {
+            border-color: #2874f0;
+            color: #2874f0;
+        }
+
+        /* ===== NOTIFICATION BADGE ===== */
+        .badge-count {
+            background-color: #ff6161;
+            color: white;
+            border-radius: 50%;
+            font-size: 10px;
+            padding: 2px 5px;
+            margin-left: 3px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: #172337;
+            color: #878787;
+            padding: 40px 20px;
+            margin-top: 20px;
+        }
+
+        .footer h5 {
+            color: #878787;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-divider {
+            border-color: #404040;
+            margin: 20px 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: #878787;
+            margin-top: 20px;
+        }
+
+        /* ===== WRAPPER ===== */
+        .page-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* ===== LOGIN BUTTON ===== */
+        .login-btn {
+            background-color: white;
+            color: #2874f0;
+            border: none;
+            padding: 7px 25px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 3px;
+        }
+
+        .login-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* ===== OFFER TAG ===== */
+        .offer-tag {
+            background-color: #ff9f00;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-sm" style="background-color: #2874f0;">
+        <div class="container-fluid" style="max-width: 1280px; margin: 0 auto;">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="https://static.wixstatic.com/media/c7de0c_4e9f90a28ec8474bbe21d0c8ad56f292~mv2.png/v1/fill/w_600%2Ch_226%2Cal_c%2Cq_90/file.jpg"
+                    alt="Flipkart">
+            </a>
+
+            <!-- Search -->
+            <div style="display: flex; margin: 0 20px;">
+                <input type="search" class="search-box" placeholder="Search for products, brands and more">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="navbar-nav me-auto" style="gap: 10px;">
+                <li class="nav-item">
+                    <button class="login-btn">Login</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-store"></i> Become a Seller</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis"></i> More</a>
+                </li>
+                <li class="nav-item">
+                    <a class="cart-icon nav-link" href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge-count">3</span> Cart
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+
+        <!-- ===== CATEGORY BAR ===== -->
+        <div class="category-bar">
+            <a class="category-item" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/3724/3724720.png" alt="Grocery">
+                <p>Grocery</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE5dC3MhTkxkIEkxhylRri1zbu8NdZocuW8A&s"
+                    alt="Mobiles">
+                <p>Mobiles</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/863/863684.png" alt="Fashion">
+                <p>Fashion</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://static.thenounproject.com/png/1982056-200.png" alt="Electronics">
+                <p>Electronics</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://www.creativefabrica.com/wp-content/uploads/2019/04/Lamp-icon-by-ahlangraphic-128.jpg"
+                    alt="Home">
+                <p>Home &amp; Furniture</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://www.clipartmax.com/png/middle/41-410289_png-file-tv-icon-vector-png.png"
+                    alt="Appliances">
+                <p>Appliances</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScWWZF6iMI_EnrUCiWn9ZaFRh17ge7x_7-9Q&s"
+                    alt="Travel">
+                <p>Travel</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://thumbs.dreamstime.com/b/black-line-icon-makeover-makeup-women-black-line-icon-makeover-cosmetic-salon-glamour-makeup-women-144984203.jpg"
+                    alt="Beauty">
+                <p>Beauty</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/3081/3081993.png" alt="Two Wheelers">
+                <p>Toys</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://www.clipartmax.com/png/middle/29-295303_foodsymbol-clip-art-food-symbol-clip-art.png"
+                    alt="Two Wheelers">
+                <p>Food & Health</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://img.freepik.com/premium-vector/cricket-bat-ball-icon-mark-filled-style_1223784-3674.jpg"
+                    alt="Two Wheelers">
+                <p>Sports</p>
+            </a>
+            <a class="category-item" href="#">
+                <img src="https://www.vhv.rs/dpng/d/81-814767_book-icon-png-transparent-png.png" alt="Two Wheelers">
+                <p>Books</p>
+            </a>
+        </div>
+
+        <!-- ===== CAROUSEL ===== -->
+        <div id="flipkartCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#flipkartCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#flipkartCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#flipkartCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#flipkartCarousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn0.zingoy.com/cdn-cgi/image/width=auto,format=auto/production/uploads/campaign_image/mobile_banner/7/flipkart_Biggest_Billion_sale_zingoy_campaing_Msite.jpg"
+                        class="carousel-img d-block" alt="Sale Banner 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://voila.global/flipkart/flipkartonboarding/banner-laptop.png"
+                        class="carousel-img d-block" alt="Sale Banner 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.licdn.com/dms/image/v2/D5616AQGccRozZ74--A/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1724652094827?e=2147483647&v=beta&t=laWJFSS54E_T1rQ0gy4Jcc44ileNkjKsmd3aVoXxdjA"
+                        class="carousel-img d-block" alt="Sale Banner 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://rebatecouponcodes.com/wp-content/uploads/2024/06/Flipkart-Banner.jpg"
+                        class="carousel-img d-block" alt="Sale Banner 4">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#flipkartCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#flipkartCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- ===== DEALS OF THE DAY ===== -->
+        <div class="deals-section" style="margin-top: 10px;">
+            <h2>Deals of the Day <i class="fa-solid fa-bolt" style="color: #ff9f00; font-size: 18px;"></i></h2>
+            <p>Limited Period Offers</p>
+
+            <div class="deals-row">
+                <a class="deal-card" href="#">
+                    <img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/mobile/g/l/j/-original-imagzrfwkeu2zazh.jpeg?q=90"
+                        alt="Phone">
+                    <div class="deal-name">Redmi Note 13</div>
+                    <div class="deal-discount">58% off</div>
+                </a>
+                <a class="deal-card"
+                    href="https://www.flipkart.com/boat-rockerz-450-pro-upto-70-hours-playback-bluetooth/p/itmc63cac2cf241d?pid=ACCGYUVXE7NZJZ5C&lid=LSTACCGYUVXE7NZJZ5CXXE7BP&marketplace=FLIPKART&q=boat+rockerz+450+pro&store=0pm%2Ffcn%2Fgc3%2Fka8&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_12_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_12_na_na_na&fm=search-autosuggest&iid=1cc3948a-2f29-4673-8ad7-8f72a21661b4.ACCGYUVXE7NZJZ5C.SEARCH&ppt=sp&ppn=sp&ssid=qaz7qjvpgw0000001775793608547&qH=c43fa5288f9c0ad7&ov_redirect=true"
+                    target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/1536/1536/kmccosw0/headphone/u/g/s/rockerz-450-pro-boat-original-imagf9j54dayugqg.jpeg?q=90"
+                        alt="Headphones">
+                    <div class="deal-name">Boat Rockerz 450 Pro</div>
+                    <div class="deal-discount">70% off</div>
+                </a>
+                <a class="deal-card"
+                    href="https://www.flipkart.com/search?q=redmi%20note%2013&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"
+                    target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/smartwatch/m/t/s/-original-imahfmpuaj263bsd.jpeg?q=90"
+                        alt="Watch">
+                    <div class="deal-name">Fastrack Smartwatch</div>
+                    <div class="deal-discount">65% off</div>
+                </a>
+                <a class="deal-card"
+                    href="https://www.flipkart.com/search?q=men+tshirt&sid=clo%2Cash%2Cank%2Cedy&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_2_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_2_3_na_na_na&as-pos=2&as-type=RECENT&suggestionId=men+tshirt%7CMen%27s+T-shirts&requestId=51276679-9147-4ef0-b8f3-10784456036e&as-backfill=on"
+                    target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/t-shirt/5/e/y/m-pckb01480-p6-park-avenue-original-imahash3khybcmyh.jpeg?q=90"
+                        alt="Shirt">
+                    <div class="deal-name">Men's T-Shirt</div>
+                    <div class="deal-discount">80% off</div>
+                </a>
+                <a class="deal-card"
+                    href="https://www.flipkart.com/search?q=samsung%20tab%20a9&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"
+                    target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/tablet/x/m/j/-original-imaguyf2qhh2pfbg.jpeg?q=90"
+                        alt="Tablet">
+                    <div class="deal-name">Samsung Tab A9</div>
+                    <div class="deal-discount">45% off</div>
+                </a>
+                <a class="deal-card"
+                    href="https://www.flipkart.com/mens-footwear/pr?sid=osp%2Ccil&p%5B%5D=facets.brand%255B%255D%3DNIKE&param=673&param=123&p%5B%5D=facets.discount_range_v1%255B%255D%3D40%2525%2Bor%2Bmore&param=421&BU=LifeStyle&sort=price_asc"
+                    target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/t/j/g/-original-imahh6wde4hfwzzg.jpeg?q=90"
+                        alt="Shoes">
+                    <div class="deal-name">Nike Running Shoes</div>
+                    <div class="deal-discount">55% off</div>
+                </a>
+            </div>
+
+            <button class="view-all-btn"
+                style="float: none; margin: 20px auto 0 auto; display: block; width: 200px; padding: 12px; font-size: 14px; border-radius: 3px; background-color: #2874f0; color: white; border: none;">
+                View All Deals
+            </button>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5>ABOUT</h5>
+                        <a href="#">Contact Us</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>HELP</h5>
+                        <a href="#">Payments</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Cancellation &amp; Returns</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>POLICY</h5>
+                        <a href="#">Return Policy</a>
+                        <a href="#">Terms Of Use</a>
+                        <a href="#">Security</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>SOCIAL</h5>
+                        <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                    <p style="color: #878787; font-size: 12px;">
+                        <i class="fa-regular fa-copyright"></i> 2007-2025 Flipkart.com &nbsp;|&nbsp;
+                        <i class="fa-solid fa-location-dot" style="color: #2874f0;"></i> Registered in India
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- end page-wrapper -->
+
+</body>
+
+</html>

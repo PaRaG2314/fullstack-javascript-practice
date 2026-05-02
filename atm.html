@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let balance = 10000
+
+        let pin = (prompt("Enter your ATM pin"));
+
+        if (pin == "1234") {
+            let choice = Number(prompt("choose option  1. check balance  2. withdraw  3. deposit"));
+            
+            if(choice == 1){
+                alert("your balance is: " + balance)
+            }
+            else if(choice == 2){
+                let withdraw = prompt("Enter amount: ")
+                if(withdraw == "" || withdraw < 0){
+                    alert("Enter valid amount")
+                }
+                else if(withdraw <= balance){
+                    balance = balance - Number(withdraw)
+                    alert("Withdraw successful, new balance is: " + balance)
+                }else{
+                    alert("Insufficient balance")
+                }
+            }
+            
+            else if(choice == 3){
+                let deposit = prompt("Enter amount: ")
+                if(deposit == "" || deposit < 0){
+                    alert("Enter valid amount")
+                }else{
+                    balance = balance + Number(deposit)
+                    alert("Deposit successful, new balance is: " + balance)
+                }
+            }else{
+                alert("Invalid choice")
+            }
+        }else{
+            alert("Invalid Pin")
+        }
+    </script>
+</body>
+
+</html>
