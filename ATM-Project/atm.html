@@ -4,49 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ATM Project</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #atmSection {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+
+    <h2>ATM Machine</h2>
+
+    <!-- PIN SECTION -->
+    <div id="pinSection">
+        <p>Enter PIN</p>
+        <input type="password" id="pinInput">
+        <br>
+        <button id="loginBtn">Enter</button>
+    </div>
+
+    <!-- ATM SECTION -->
+    <div id="atmSection">
+        <p id="balanceText">Balance: 10000</p>
+
+        <button id="check">Check Balance</button>
+        <button id="withdrawBtn">Withdraw</button>
+        <button id="depositBtn">Deposit</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
     <script>
-        let balance = 10000
+        $(document).ready(function(){
 
-        let pin = (prompt("Enter your ATM pin"));
+            let balance = 10000;
 
-        if (pin == "1234") {
-            let choice = Number(prompt("choose option  1. check balance  2. withdraw  3. deposit"));
-            
-            if(choice == 1){
-                alert("your balance is: " + balance)
-            }
-            else if(choice == 2){
-                let withdraw = prompt("Enter amount: ")
-                if(withdraw == "" || withdraw < 0){
-                    alert("Enter valid amount")
+            // PIN check
+            $("#loginBtn").click(function(){
+                let pin = $("#pinInput").val();
+
+                if(pin == "1234"){
+                    $("#pinSection").hide();
+                    $("#atmSection").show();
+                } else {
+                    alert("Invalid PIN");
                 }
-                else if(withdraw <= balance){
-                    balance = balance - Number(withdraw)
-                    alert("Withdraw successful, new balance is: " + balance)
-                }else{
-                    alert("Insufficient balance")
+            });
+
+            // Check balance
+            $("#check").click(function(){
+                $("#balanceText").text("Balance: " + balance);
+            });
+
+            // Withdraw
+            $("#withdrawBtn").click(function(){
+                let amount = prompt("Enter amount:");
+
+                if(amount == "" || amount < 0){
+                    alert("Invalid amount");
                 }
-            }
-            
-            else if(choice == 3){
-                let deposit = prompt("Enter amount: ")
-                if(deposit == "" || deposit < 0){
-                    alert("Enter valid amount")
-                }else{
-                    balance = balance + Number(deposit)
-                    alert("Deposit successful, new balance is: " + balance)
+                else if(Number(amount) <= balance){
+                    balance = balance - Number(amount);
+                    $("#balanceText").text("Balance: " + balance);
                 }
-            }else{
-                alert("Invalid choice")
-            }
-        }else{
-            alert("Invalid Pin")
-        }
+                else{
+                    alert("Insufficient balance");
+                }
+            });
+
+            // Deposit
+            $("#depositBtn").click(function(){
+                let amount = prompt("Enter amount:");
+
+                if(amount == "" || amount < 0){
+                    alert("Invalid amount");
+                }
+                else{
+                    balance = balance + Number(amount);
+                    $("#balanceText").text("Balance: " + balance);
+                }
+            });
+
+            // Reset
+            $("#resetBtn").click(function(){
+                balance = 10000;
+                $("#balanceText").text("Balance: " + balance);
+            });
+
+        });
     </script>
+
 </body>
 
 </html>
