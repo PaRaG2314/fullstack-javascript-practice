@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form App</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            background-color: #1e2a38;
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+        }
+
+        .box {
+            background-color: white;
+            width: 320px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            margin: 8px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+        }
+
+        #result {
+            margin-top: 15px;
+            background-color: #f4f6f8;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h3>Form</h3>
+
+    <input type="text" id="name" placeholder="Full Name"><br>
+    <input type="text" id="email" placeholder="Email"><br>
+    <input type="text" id="password" placeholder="Password"><br>
+
+    <p>Gender</p>
+    <input type="radio" id="male"> Male
+    <input type="radio" id="female"> Female <br>
+
+    <p>Skills</p>
+    <input type="checkbox" id="html"> HTML
+    <input type="checkbox" id="css"> CSS
+    <input type="checkbox" id="js"> JS <br>
+
+    <button id="btn">Submit</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $("#btn").click(function(){
+
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let password = $("#password").val();
+
+        let gender = "";
+        if(document.getElementById("male").checked){
+            gender = "Male";
+        }
+        if(document.getElementById("female").checked){
+            gender = "Female";
+        }
+
+        let skills = "";
+        if(document.getElementById("html").checked){
+            skills += "HTML ";
+        }
+        if(document.getElementById("css").checked){
+            skills += "CSS ";
+        }
+        if(document.getElementById("js").checked){
+            skills += "JS ";
+        }
+
+        if(name == "" || email == "" || password == ""){
+            alert("Fill all fields");
+        } else {
+            alert("Form Submitted Successfully");
+            $("#result").html(
+                "Name: " + name + "<br>" +
+                "Email: " + email + "<br>" +
+                "Password: " + password + "<br>" +
+                "Gender: " + gender + "<br>" +
+                "Skills: " + skills
+            );
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
