@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        .form2 {
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        button {
+            margin: 2px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form2">
+    <h1>Form Data</h1>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Gender</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <br><br>
+
+    <a href="crud-form.html"><button>Go Back</button></a>
+</div>
+
+<script>
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    const tableBody = document.getElementById("tableBody");
+
+    function displayUsers() {
+        tableBody.innerHTML = "";
+
+        users.forEach((user) => {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>${user.password}</td>
+                <td>${user.gender}</td>
+                <td>${user.skills.join(", ")}</td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+    }
+
+
+    displayUsers();
+</script>
+
+</body>
+</html>
