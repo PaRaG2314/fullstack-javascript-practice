@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //OBJECT
+        // let student = {
+        //     name: "abc",
+        //     age: "22",
+        //     course: "python"
+        // }
+        // console.log(student)
+
+        // let student={
+        //     name: "Sahil",
+        //     age: "22",
+        //     course: "python",
+        //     greet: function(){    //FUNCTION
+        //         return "hello" + this.name;
+        //     }
+        // }
+        // console.log(student.greet());
+
+
+
+        //PROMISE
+        //example 1-->
+        // let myPromise = new Promise((resolve, reject)=>{
+        //     let success = true;
+        //     if(success){
+        //         resolve("Operation successful")
+        //     }
+        //     else{
+        //         reject("Failed")
+        //     }
+        // })
+
+        // myPromise
+        // .then(function(result){
+        //     console.log(result);
+        // })
+        // .catch(function(error){
+        //     console.log(error);
+        // })
+
+        //example 2-->
+        let checkResult = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                let marks = 75;
+
+                if (marks >= 50) {
+                    resolve("pass");
+                } else {
+                    reject("fail")
+                }
+            }, 2000); //2 sec after refresh output shows
+        });
+
+        checkResult
+            .then(function (result) {
+                console.log(result);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+
+    </script>
+</body>
+
+</html>
