@@ -1,80 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Developer Journey</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: #222;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #0d6efd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #999;
+            padding: 12px;
+        }
+
+        table th {
+            background-color: #dfe6e9;
+        }
+
         .box {
             background-color: lightblue;
             border: 2px solid black;
             padding: 15px;
-            margin: 10px;
-            width: 50%;
+            margin: 10px 0;
             text-align: center;
         }
 
         .highlight {
             background-color: yellow;
             color: red;
+            padding: 2px 5px;
         }
 
         .layout-box {
-            background-color: lightgreen;
-            height: 100px;
             width: 100px;
+            height: 100px;
+            background-color: lightgreen;
             float: left;
             margin: 10px;
         }
 
         .flex-container {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
-            background-color: lightcyan;
-            padding: 20px;
-            width: 80%;
+            margin-top: 20px;
         }
 
         .flex-item {
-            height: 100px;
-            width: 150px;
             background-color: coral;
-            text-align: center;
-            line-height: 100px;
+            width: 150px;
+            height: 100px;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .row {
+        .row-demo {
             display: flex;
             gap: 15px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .small {
-            height: 100px;
             width: 150px;
+            height: 100px;
             background-color: teal;
         }
 
         .large {
-            height: 100px;
             width: 300px;
+            height: 100px;
             background-color: purple;
         }
-    </style>
 
+        .code-box {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+
+        .anim-box {
+            width: 150px;
+            height: 80px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 10px;
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: red;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        .crud-mini,
+        .atm-mini,
+        .validation-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0d6efd;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: gray;
+            margin-top: 40px;
+        }
+
+        @media(max-width:768px) {
+
+            .flex-container,
+            .row-demo {
+                flex-direction: column;
+            }
+
+            iframe {
+                width: 100%;
+            }
+
+            table {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1 style="background-color: black; color: white; text-align: center;">
-        🚀 My Developer Journey
-    </h1>
+    <h1>🚀 My Developer Journey</h1>
 
-    <h2 style="text-align: center; color: gray;">
-        Learning Full Stack with Python
+    <h2 style="text-align:center; color:gray;">
+        Learning Full Stack Development with Python
     </h2>
 
     <hr>
@@ -82,21 +228,24 @@
     <h2>👨‍💻 About Me</h2>
 
     <p>
-        <u>Hello! I started learning <mark>Full Stack Development</mark>.</u>
-        I am building my skills step by step every day.
+        Hello! I started learning
+        <mark>Full Stack Development</mark>.
+        I am improving my skills every day by building projects and practicing.
     </p>
 
-    <p><i>
-        My goal is to become a professional developer and build real-world projects.
-    </i></p>
+    <br>
+
+    <p>
+        My goal is to become a professional developer and build real-world applications.
+    </p>
 
     <hr>
 
     <h2>📊 My Learning Progress</h2>
 
-    <table border="2" align="center" style="width: 50%; text-align: center;">
+    <table>
 
-        <thead style="background-color: lightgray;">
+        <thead>
             <tr>
                 <th>Day</th>
                 <th>Topic</th>
@@ -106,116 +255,134 @@
         </thead>
 
         <tbody>
+
             <tr style="background-color: lightgreen;">
                 <td>1</td>
-                <td>HTML Basics</td> 
+                <td>HTML Basics</td>
                 <td>Completed ✅</td>
-                <td>
-                    <ul>
-                        <li>Headings</li>
-                        <li>Paragraphs</li>
-                        <li>Images</li>
-                    </ul>
-                </td>
+                <td>Headings, Paragraphs, Images</td>
             </tr>
 
             <tr style="background-color: lightskyblue;">
                 <td>2</td>
                 <td>Lists & Links</td>
                 <td>Completed ✅</td>
-                <td>
-                    <ul>
-                        <li>Anchor Tag</li>
-                        <li>Ordered List</li>
-                        <li>Unordered List</li>
-                    </ul>
-                </td>
+                <td>Anchor Tag, Lists</td>
             </tr>
 
             <tr style="background-color: lightyellow;">
                 <td>3</td>
-                <td>Div, Span, CSS</td>
+                <td>Div, Span & CSS</td>
                 <td>Completed ✅</td>
-                <td>
-                    <ul>
-                        <li>Div</li>
-                        <li>Span</li>
-                        <li>Internal CSS</li>
-                        <li>Layout (float)</li>
-                    </ul>
-                </td>
+                <td>Div, Span, Styling</td>
             </tr>
 
             <tr style="background-color: lightpink;">
                 <td>4</td>
                 <td>Flexbox & Layout</td>
                 <td>Completed ✅</td>
-                <td>
-                    <ul>
-                        <li>Flexbox</li>
-                        <li>Rows</li>
-                        <li>Layout Design</li>
-                    </ul>
-                </td>
+                <td>Flexbox, Layout Design</td>
             </tr>
 
             <tr style="background-color: lightcoral;">
-                <td>7</td>
+                <td>5</td>
                 <td>HTML Commands & Tables</td>
                 <td>Completed ✅</td>
-                <td>
-                    <ul>
-                        <li>All HTML Tags</li>
-                        <li>Table Structuring</li>
-                        <li>Spacing & Padding</li>
-                    </ul>
-                </td>
+                <td>HTML Tags, Tables</td>
+            </tr>
+
+            <tr style="background-color:#d5f5e3;">
+                <td>6</td>
+                <td>CSS Animations & Bootstrap</td>
+                <td>Completed ✅</td>
+                <td>Keyframes, Bootstrap Grid</td>
+            </tr>
+
+            <tr style="background-color:#fdebd0;">
+                <td>7</td>
+                <td>JavaScript Basics</td>
+                <td>Completed ✅</td>
+                <td>Variables, Loops, Conditions</td>
+            </tr>
+
+            <tr style="background-color:#d6eaf8;">
+                <td>8</td>
+                <td>Arrays & Functions</td>
+                <td>Completed ✅</td>
+                <td>Arrays, Functions, Arrow Functions</td>
+            </tr>
+
+            <tr style="background-color:#f9ebea;">
+                <td>9</td>
+                <td>DOM & Promises</td>
+                <td>Completed ✅</td>
+                <td>DOM Manipulation, Promises</td>
+            </tr>
+
+            <tr style="background-color:#eaf2ff;">
+                <td>10</td>
+                <td>jQuery</td>
+                <td>Completed ✅</td>
+                <td>fadeIn, fadeOut, toggle</td>
+            </tr>
+
+            <tr style="background-color:#e8daef;">
+                <td>11</td>
+                <td>CRUD + ATM Project</td>
+                <td>Completed ✅</td>
+                <td>localStorage, CRUD, ATM</td>
+            </tr>
+
+            <tr style="background-color:#fdfefe;">
+                <td>12</td>
+                <td>Flipkart Clone</td>
+                <td>Completed ✅</td>
+                <td>Bootstrap UI, Product Cards</td>
+            </tr>
+
+            <tr style="background-color:#d4efdf;">
+                <td>13</td>
+                <td>Form Validation</td>
+                <td>Completed ✅</td>
+                <td>Validation, Error Handling</td>
+            </tr>
+
+            <tr style="background-color:#d6eaf8;">
+                <td>14</td>
+                <td>Git & GitHub</td>
+                <td>Completed ✅</td>
+                <td>git init, add, commit, push</td>
+            </tr>
+
+            <tr style="background-color:#fdebd0;">
+                <td>15</td>
+                <td>Responsive Design</td>
+                <td>Completed ✅</td>
+                <td>Media Queries, Mobile UI</td>
+            </tr>
+
+            <tr style="background-color:#ebdef0;">
+                <td>16</td>
+                <td>Portfolio Website</td>
+                <td>In Progress 🚧</td>
+                <td>Modern UI, Projects Section</td>
             </tr>
 
         </tbody>
 
     </table>
 
-    <br><br>
-
-    <hr>
-    <h2>📘 Today's Learning</h2>
-
-    <h3>📅 Day 1 - HTML Basics</h3>
-    <h4>This is H4 Heading</h4>
-    <p><i>Italic</i></p>
-    <p><u>Underline</u></p>
-    <p><mark>Highlight</mark></p>
-
-    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
-         height="80" width="80">
-
     <hr>
 
-    <h3>📅 Day 2 - Lists & Links</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-    </ul>
-
-    <ol>
-        <li>Learn</li>
-        <li>Practice</li>
-    </ol>
-
-    <a href="https://www.google.com/" target="_blank">Visit Google</a>
-
-    <hr>
-
-    <h3>📅 Day 3 - Div, Span & CSS</h3>
+    <h2>📅 Day 3 - Div & CSS</h2>
 
     <div class="box">
-        <h3>This is inside a Div</h3>
+        <h3>This is inside Div</h3>
         <p>Div helps structure content</p>
     </div>
 
     <p>
-        This is normal text and 
+        This is normal text and
         <span class="highlight">this is styled using span</span>
     </p>
 
@@ -227,96 +394,305 @@
 
     <hr>
 
-    <h3>📅 Day 4 - Flexbox & Layout</h3>
+    <h2>📅 Day 4 - Flexbox</h2>
 
     <div class="flex-container">
         <div class="flex-item">1</div>
         <div class="flex-item">2</div>
         <div class="flex-item">3</div>
-        <div class="flex-item">4</div>
     </div>
 
-    <div class="row">
+    <div class="row-demo">
         <div class="small"></div>
         <div class="large"></div>
-        <div class="small"></div>
-    </div>
-
-    <div class="row">
-        <div class="large"></div>
-        <div class="small"></div>
-        <div class="small"></div>
     </div>
 
     <hr>
 
-    <h3>📅 Day 7 - HTML Commands Table</h3>
+    <h2>📅 Day 6 - CSS Animation</h2>
 
-    <table border="4" align="center" 
-    style="background-color: #20bcbc; width: 70%; border-collapse: collapse; margin-top: 20px;">
-
-        <thead>
-            <tr>
-                <th style="background-color: lightcyan; padding: 15px;"> Sr no. </th>
-                <th style="background-color: lightcyan; padding: 15px;"> Commands </th>
-                <th style="background-color: lightcyan; padding: 15px;"> Syntax </th>
-                <th style="background-color: lightcyan; padding: 15px;"> Use </th>
-            </tr>
-        </thead>
-
-        <tbody align="center" style="background-color: lightseagreen;">
-            <tr><td style="padding:15px;">1</td><td>html</td><td>&lt;html&gt;</td><td>Root</td></tr>
-            <tr><td style="padding:15px;">2</td><td>head</td><td>&lt;head&gt;</td><td>Metadata</td></tr>
-            <tr><td style="padding:15px;">3</td><td>body</td><td>&lt;body&gt;</td><td>Content</td></tr>
-            <tr><td style="padding:15px;">4</td><td>title</td><td>&lt;title&gt;</td><td>Tab</td></tr>
-            <tr><td style="padding:15px;">5</td><td>h1-h3</td><td>&lt;h1&gt;</td><td>Headings</td></tr>
-            <tr><td style="padding:15px;">6</td><td>p</td><td>&lt;p&gt;</td><td>Text</td></tr>
-            <tr><td style="padding:15px;">7</td><td>div</td><td>&lt;div&gt;</td><td>Container</td></tr>
-            <tr><td style="padding:15px;">8</td><td>span</td><td>&lt;span&gt;</td><td>Inline</td></tr>
-            <tr><td style="padding:15px;">9</td><td>a</td><td>&lt;a&gt;</td><td>Link</td></tr>
-            <tr><td style="padding:15px;">10</td><td>img</td><td>&lt;img&gt;</td><td>Image</td></tr>
-            <tr><td style="padding:15px;">11</td><td>button</td><td>&lt;button&gt;</td><td>Clickable</td></tr>
-            <tr><td style="padding:15px;">12</td><td>iframe</td><td>&lt;iframe&gt;</td><td>Embed</td></tr>
-        </tbody>
-
-    </table>
+    <div class="anim-box">
+        Animated
+    </div>
 
     <hr>
 
-    <h3>📅 Day 7 - Button & Iframe</h3>
+    <h2>📅 Day 7 - JavaScript</h2>
 
-    <button>Simple Button</button>
+    <div class="code-box">
 
-    <button style="background-color: aqua; padding: 10px; border-radius: 10px;">
-        Styled Button
-    </button>
+let number = 10;
 
-    <br><br>
+if(number > 5){
+    console.log(\"Greater\");
+}
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.421892558186!2d76.74494417557827!3d30.678403674610433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec0fc0000001%3A0x2fe21eed866f0d52!2sThinkNEXT%20Technologies%20-%20digital%20marketing%20industrial%20training%20internship%20chandigarh%20mohali!5e0!3m2!1sen!2sin!4v1775456253857!5m2!1sen!2sin"
-        width="400" height="250" style="border:0;" allowfullscreen="">
-    </iframe>
+for(let i = 1; i <= 5; i++){
+    console.log(i);
+}
 
-    <br><br>
-
-    <iframe width="400" height="250"
-        src="https://www.youtube.com/embed/fvcXOrt8hdA"
-        frameborder="0" allowfullscreen>
-    </iframe>
+    </div>
 
     <hr>
 
-    <h2>🛠️ My Current Skills</h2>
+    <h2>📅 Day 9 - DOM Manipulation</h2>
+
+    <p id="dom-text">This text will change.</p>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("dom-text").innerHTML =
+                "DOM Manipulation Successful ✅";
+        }
+    </script>
+
+    <hr>
+
+    <h2>📅 Day 10 - jQuery</h2>
+
+    <div id="jq-box"
+        style="width:150px; height:100px; background:red; display:none;">
+    </div>
+
+    <button id="show-btn">Fade In</button>
+    <button id="hide-btn">Fade Out</button>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#show-btn").click(function () {
+                $("#jq-box").fadeIn();
+            });
+
+            $("#hide-btn").click(function () {
+                $("#jq-box").fadeOut();
+            });
+
+        });
+
+    </script>
+
+    <hr>
+
+    <h2>📅 Day 11 - CRUD Form</h2>
+
+    <div class="crud-mini">
+
+        <input type="text" id="crud-name" placeholder="Name">
+
+        <input type="email" id="crud-email" placeholder="Email">
+
+        <button onclick="addUser()">Add User</button>
+
+        <ul id="crud-list"></ul>
+
+    </div>
+
+    <script>
+
+        let users = [];
+
+        function addUser() {
+
+            let name =
+                document.getElementById("crud-name").value;
+
+            let email =
+                document.getElementById("crud-email").value;
+
+            if (name == "" || email == "") {
+                alert("Fill all fields");
+                return;
+            }
+
+            users.push({ name, email });
+
+            renderUsers();
+
+        }
+
+        function renderUsers() {
+
+            let list =
+                document.getElementById("crud-list");
+
+            list.innerHTML = "";
+
+            users.forEach(function (user) {
+
+                list.innerHTML +=
+                    `<li>${user.name} - ${user.email}</li>`;
+
+            });
+
+        }
+
+    </script>
+
+    <hr>
+
+    <h2>📅 Day 11 - ATM Project</h2>
+
+    <div class="atm-mini">
+
+        <h3>🏧 ATM Machine</h3>
+
+        <p id="balance">Balance: ₹10000</p>
+
+        <button onclick="withdraw()">Withdraw ₹500</button>
+
+    </div>
+
+    <script>
+
+        let balance = 10000;
+
+        function withdraw() {
+
+            balance -= 500;
+
+            document.getElementById("balance").innerHTML =
+                "Balance: ₹" + balance;
+
+        }
+
+    </script>
+
+    <hr>
+
+    <h2>📅 Day 13 - Form Validation</h2>
+
+    <div class="validation-box">
+
+        <input type="text" id="val-name"
+            placeholder="Full Name">
+
+        <input type="email" id="val-email"
+            placeholder="Email">
+
+        <input type="password" id="val-password"
+            placeholder="Password">
+
+        <button onclick="validateForm()">
+            Validate
+        </button>
+
+        <p id="validation-result"></p>
+
+    </div>
+
+    <script>
+
+        function validateForm() {
+
+            let name =
+                document.getElementById("val-name").value;
+
+            let email =
+                document.getElementById("val-email").value;
+
+            let password =
+                document.getElementById("val-password").value;
+
+            if (name == "" || email == "" || password == "") {
+
+                document.getElementById("validation-result")
+                    .innerHTML =
+                    "❌ Fill all fields";
+
+                return;
+
+            }
+
+            if (password.length < 6) {
+
+                document.getElementById("validation-result")
+                    .innerHTML =
+                    "❌ Password too short";
+
+                return;
+
+            }
+
+            document.getElementById("validation-result")
+                .innerHTML =
+                "✅ Validation Successful";
+
+        }
+
+    </script>
+
+    <hr>
+
+    <h2>📅 Day 14 - Git & GitHub</h2>
+
+    <div class="code-box">
+
+git init
+
+git add .
+
+git commit -m \"Updated Portfolio\"
+
+git push origin main
+
+    </div>
+
+    <hr>
+
+    <h2>🚀 Major Projects</h2>
+
+    <div class="flex-container">
+
+        <div class="project-card">
+            <h3>🏧 ATM Project</h3>
+            <p>
+                ATM simulation with balance checking,
+                withdraw and deposit functionality.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>🛒 Flipkart Clone</h3>
+            <p>
+                Responsive Flipkart UI using Bootstrap 5.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>📝 CRUD Dashboard</h3>
+            <p>
+                Registration form with CRUD operations.
+            </p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h2>🛠️ Current Skills</h2>
 
     <ul>
-        <li>HTML</li>
-        <li>Basic CSS</li>
-        <li>Understanding of Web Structure</li>
-        <li>Flexbox Layout</li>
+
+        <li>HTML & Semantic Tags</li>
+        <li>CSS Flexbox & Animations</li>
+        <li>Bootstrap 5</li>
+        <li>JavaScript Basics</li>
+        <li>DOM Manipulation</li>
+        <li>jQuery</li>
+        <li>CRUD Operations</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+
     </ul>
 
-    <hr>
+    <footer>
+        Built by Parag 🚀 | Learning Full Stack Development
+    </footer>
 
 </body>
+
 </html>
