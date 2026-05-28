@@ -17,30 +17,52 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f7fa;
+            background: linear-gradient(to right, #eef2ff, #f8fafc);
             color: #222;
             padding: 20px;
+            line-height: 1.7;
         }
 
         h1 {
-            background-color: black;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
             color: white;
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
         }
 
         h2 {
             margin-top: 40px;
             margin-bottom: 15px;
+            color: #1e293b;
+            border-left: 6px solid #2563eb;
+            padding-left: 12px;
         }
 
         h3 {
-            margin-top: 30px;
+            margin-top: 20px;
             margin-bottom: 10px;
-            color: #0d6efd;
+            color: #2563eb;
+        }
+
+        p,
+        li {
+            font-size: 16px;
+        }
+
+        hr {
+            margin: 35px 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
         }
 
         table {
@@ -48,38 +70,57 @@
             border-collapse: collapse;
             overflow-x: auto;
             margin-top: 20px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
         }
 
         table th,
         table td {
-            border: 1px solid #999;
-            padding: 12px;
+            border: 1px solid #ddd;
+            padding: 14px;
+            text-align: center;
         }
 
         table th {
-            background-color: #dfe6e9;
+            background: #2563eb;
+            color: white;
+            font-size: 17px;
+        }
+
+        table tr:hover {
+            transform: scale(1.01);
+            transition: 0.2s;
         }
 
         .box {
-            background-color: lightblue;
-            border: 2px solid black;
-            padding: 15px;
+            background: linear-gradient(to right, #38bdf8, #60a5fa);
+            border: none;
+            padding: 20px;
             margin: 10px 0;
             text-align: center;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
         }
 
         .highlight {
             background-color: yellow;
             color: red;
-            padding: 2px 5px;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
         }
 
         .layout-box {
             width: 100px;
             height: 100px;
-            background-color: lightgreen;
+            background: linear-gradient(to bottom right, #22c55e, #15803d);
             float: left;
             margin: 10px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         .flex-container {
@@ -90,13 +131,22 @@
         }
 
         .flex-item {
-            background-color: coral;
+            background: linear-gradient(135deg, #fb7185, #f97316);
             width: 150px;
             height: 100px;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .flex-item:hover {
+            transform: translateY(-8px);
         }
 
         .row-demo {
@@ -108,34 +158,39 @@
         .small {
             width: 150px;
             height: 100px;
-            background-color: teal;
+            background: linear-gradient(to right, #14b8a6, #0f766e);
+            border-radius: 12px;
         }
 
         .large {
             width: 300px;
             height: 100px;
-            background-color: purple;
+            background: linear-gradient(to right, #9333ea, #6b21a8);
+            border-radius: 12px;
         }
 
         .code-box {
-            background-color: #2d2d2d;
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 18px;
+            border-radius: 14px;
             overflow-x: auto;
             margin-top: 10px;
             line-height: 1.8;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-left: 5px solid #38bdf8;
         }
 
         .anim-box {
             width: 150px;
             height: 80px;
-            background-color: red;
             color: white;
             text-align: center;
             line-height: 80px;
-            border-radius: 10px;
+            border-radius: 12px;
+            font-weight: bold;
             animation: colorChange 3s infinite;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
         }
 
         @keyframes colorChange {
@@ -156,45 +211,74 @@
         .atm-mini,
         .validation-box {
             background-color: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
             margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .crud-mini:hover,
+        .atm-mini:hover,
+        .validation-box:hover,
+        .project-card:hover {
+            transform: translateY(-5px);
         }
 
         input {
-            padding: 10px;
+            padding: 12px;
             margin-top: 10px;
             width: 100%;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0px 0px 8px rgba(37, 99, 235, 0.3);
         }
 
         button {
-            padding: 10px 20px;
-            margin-top: 10px;
+            padding: 12px 20px;
+            margin-top: 12px;
             border: none;
-            border-radius: 5px;
-            background-color: #0d6efd;
+            border-radius: 10px;
+            background: linear-gradient(to right, #2563eb, #1d4ed8);
             color: white;
             cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         button:hover {
-            opacity: 0.9;
+            transform: scale(1.05);
+            opacity: 0.95;
         }
 
         .project-card {
             background-color: white;
-            padding: 20px;
+            padding: 22px;
             width: 250px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 18px;
+            box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            border-top: 5px solid #2563eb;
+        }
+
+        ul {
+            margin-left: 20px;
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            color: gray;
-            margin-top: 40px;
+            color: white;
+            margin-top: 50px;
+            background: linear-gradient(to right, #0f172a, #1e3a8a);
+            border-radius: 15px;
+            font-size: 17px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
         }
 
         @media(max-width:768px) {
@@ -210,6 +294,10 @@
 
             table {
                 font-size: 12px;
+            }
+
+            h1 {
+                font-size: 28px;
             }
         }
     </style>
@@ -424,7 +512,7 @@
 let number = 10;
 
 if(number > 5){
-    console.log(\"Greater\");
+    console.log("Greater");
 }
 
 for(let i = 1; i <= 5; i++){
@@ -453,7 +541,7 @@ for(let i = 1; i <= 5; i++){
     <h2>📅 Day 10 - jQuery</h2>
 
     <div id="jq-box"
-        style="width:150px; height:100px; background:red; display:none;">
+        style="width:150px; height:100px; background:red; display:none; border-radius:12px;">
     </div>
 
     <button id="show-btn">Fade In</button>
@@ -635,7 +723,7 @@ git init
 
 git add .
 
-git commit -m \"Updated Portfolio\"
+git commit -m "Updated Portfolio"
 
 git push origin main
 
